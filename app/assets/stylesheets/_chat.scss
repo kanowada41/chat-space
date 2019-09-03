@@ -1,0 +1,98 @@
+.chat {
+  width: calc(100% - 300px);
+  .header {
+    height: 100px;
+    padding: 0 40px;
+    box-sizing: border-box;
+    border-bottom: solid 1px #eeeeee;
+    @include clearfix;
+    .left-header {
+      float: left;
+      &__name {
+        font-size: 20px;
+        color: #333333;
+        margin-top: 35px;
+      }
+      &__member {
+        font-size: 12px;
+        color: #999999;
+        margin-top: 15px;
+      }
+    }
+    .right-header {
+      float: right;
+      height: 40px;
+      line-height: 40px;
+      margin-top: 28px;
+      padding: 0 20px;
+      border: 1px solid $lightblue;
+      color: $lightblue;
+    }
+  }
+  .messages {
+    padding: 46px 40px ;
+    background-color: $white;
+    height: calc(100% - 100px - 90px);
+    box-sizing: border-box;
+    .message {
+      margin-bottom: 40px;
+      .up-message {
+        display: flex;
+        &__neme {
+          font-size: 16px;
+          font-weight: bold;
+        }
+        &__date {
+          font-size: 12px;
+          color: $gray;
+          margin-left: 10px;
+        }
+      }
+      .down-message {
+        padding-top: 10px;
+        font-size: 14px;
+      }
+    }
+  }
+  .form {
+    background-color: #eeeeee;
+    height: 90px;
+    padding: 20px 50px 20px 40px;
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+    &__text {
+      box-sizing: border-box;
+      float: left;
+      width: calc(100% - 150px);
+      height: 50px;
+    }
+    &__buttom {
+      background-color: $white;
+      float: left;
+      height: 50px;
+      padding-right: 10px;
+      position: absolute;
+      right: 180px;
+      top: 20px;
+      &__image {
+        font-size: 20px;
+        line-height: 50px;
+      }
+      .hide {
+        display: none;
+      }
+    }
+    &__submit {
+      display: block;
+      float: right;
+      border: none;
+      background-color: $lightblue;
+      color: $white;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
+    }
+  }
+}
