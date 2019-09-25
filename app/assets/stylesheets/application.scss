@@ -1,9 +1,12 @@
 @import "./reset";
-@import "config/variable";
+@import "config/colors";
 @import "font-awesome";
 @import "mixins/flexbox";
 @import "mixins/clearfix";
-@import "./chat";
+@import "modules/user";
+@import "modules/chat";
+@import "modules/flash";
+@import "modules/group";
 @import "./side-bar";
 @import "./wrapper";
 

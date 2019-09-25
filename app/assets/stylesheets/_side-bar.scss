@@ -31,14 +31,19 @@
     box-sizing: border-box;
     .group {
       padding: 20px 0 40px;
+      .icon-link {
+        text-decoration: none;
+      }
       &__name {
         font-size: 15px;
         font-weight: bold;
+        color: $white;
       }
       &__message {
         font-size: 11px;
         font-weight: bold;
         padding-top: 5px;
+        color: $white;
       }
     }
   }
