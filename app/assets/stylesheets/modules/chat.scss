@@ -50,8 +50,12 @@
         }
       }
       .down-message {
-        padding-top: 10px;
+        margin-top: 10px;
+        &__content {
+        color: #434a54;
+        margin-bottom: 40px;
         font-size: 14px;
+        }
       }
     }
   }
@@ -62,30 +66,26 @@
     display: block;
     box-sizing: border-box;
     position: relative;
-    &__text {
-      box-sizing: border-box;
+    &__message {
+      border: none;
       float: left;
       width: calc(100% - 150px);
       height: 50px;
     }
-    &__buttom {
+    &__mask {
       background-color: $white;
       float: left;
       height: 50px;
       padding-right: 10px;
-      position: absolute;
-      right: 180px;
-      top: 20px;
       &__image {
         font-size: 20px;
         line-height: 50px;
       }
-      .hide {
+      .hidden {
         display: none;
       }
     }
     &__submit {
-      display: block;
       float: right;
       border: none;
       background-color: $lightblue;

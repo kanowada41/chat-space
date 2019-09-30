@@ -4,38 +4,25 @@
     .header
       .left-header
         .left-header__name
-          グループ名
+          = @group.name
         .left-header__member
-          Aちゃん
+          -@group.users.each do |user|
+            = user.name
       .right-header
         .right-header__button
           Edit
 
     .messages
-      .message
-        .up-message
-          .up-message__name
-            Aちゃん
-          .up-message__date
-            2019/8/31
-        .down-message
-          Hello!
-      .message
-        .up-message
-          .up-message__name
-            Bちゃん
-          .up-message__date
-            2019/8/31
-        .down-message
-          Hi!
+      = render @messages
+    
     .form
-      %form
-        %input.form__text{:placeholder => "Type a message"}
-        .form__buttom
-          %label.form__buttom__image
-            = fa_icon 'picture-o'
-            %input.hide{type: 'file'}
-        %input.form__submit{:type => "submit", :value => "send"}
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: "Type a message"
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do 
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
 
 
       
